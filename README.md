@@ -33,9 +33,9 @@ Will you join this adventure?
 In the map, each team is randomly spawned in separate places, fight against other players in a limited map, and survives to the end to be the final winner.
 
 ## Maintainers
-[Jack](https://github.com/imJack6)
+<img src="https://avatars.githubusercontent.com/u/58357771?v=4" alt="Jack's Avatar" width="32" height="32" />[Jack](https://github.com/imJack6)
 
-[William](https://github.com/WilliamPascal)
+<img src="https://avatars.githubusercontent.com/u/100808920?v=4" alt="Jack's Avatar" width="32" height="32" />[William](https://github.com/WilliamPascal)
 
 ## Bug Report
 You may contact us with each one's e-mail:
