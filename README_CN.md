@@ -28,14 +28,16 @@ README 语言: 简体中文 | [English](README.md)
 当然，你可以选择拯救队友，一起逃出生天。  
 但这无疑是火上浇油。  
 你会接受这份独一无二的挑战吗？  
+// 1vN
 
 ## 玩法
-在地图中每个队伍随机出生到一个陌生的地方，在有限的地图内与其他玩家对战，活到最后为最后的赢家。
+在地图中每个队伍随机出生到一个陌生的地方，在有限的地图内与其他玩家对战，活到最后为赢家。  
+// NvN
 
 ## 项目维护者
-[Jack](https://github.com/imJack6)
+<img src="https://avatars.githubusercontent.com/u/58357771?v=4" alt="Jack's Avatar" width="32" height="32" />[Jack](https://github.com/imJack6)
 
-[William](https://github.com/WilliamPascal)
+<img src="https://avatars.githubusercontent.com/u/100808920?v=4" alt="Jack's Avatar" width="32" height="32" />[William](https://github.com/WilliamPascal)
 
 ## 问题报告
 你可以用电子邮件联系我们:  
