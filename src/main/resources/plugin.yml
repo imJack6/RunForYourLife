@@ -1,0 +1,4 @@
+name: RunForYourLife
+version: '${project.version}'
+main: cn.jackcraft.runforyourlife.RunForYourLife
+api-version: 1.19
