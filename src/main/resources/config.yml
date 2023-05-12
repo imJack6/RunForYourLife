@@ -1,0 +1,33 @@
+# ╔═══╗─────────╔═══╗────────╔╗──╔╗────────────╔╗──────╔═╗
+# ║╔═╗║─────────║╔══╝────────║╚╗╔╝║────────────║║──────║╔╝
+# ║╚═╝║╔╗╔╗╔══╗─║╚══╗╔══╗╔═╗─╚╗╚╝╔╝╔══╗╔╗╔╗╔═╗─║║───╔╗╔╝╚╗╔══╗
+# ║╔╗╔╝║║║║║╔╗╗─║╔══╝║╔╗║║╔╝──╚╗╔╝─║╔╗║║║║║║╔╝─║║─╔╗╠╣╚╗╔╝║║═╣
+# ║║║╚╗║╚╝║║║║║─║║───║╚╝║║║────║║──║╚╝║║╚╝║║║──║╚═╝║║║─║║─║║═╣
+# ╚╝╚═╝╚══╝╚╝╚╝─╚╝───╚══╝╚╝────╚╝──╚══╝╚══╝╚╝──╚═══╝╚╝─╚╝─╚══╝
+# 逃往生处 配置文件
+# RunForYourLife Configuration file
+#————————————————————————————
+# 插件配置文件版本 [请勿修改此项]
+# Plugin configuration file version [Please DO NOT modify this value!]
+version: 1
+# 插件主配置
+# Plugin main config
+plugin-config:
+  # 插件前缀
+  # Plugin logging message prefix
+  prefix: "&7[&6RunForYourLife&7]"
+  # 插件语言 [对应配置文件目录中的 "messages" 文件夹内的文件，例如 "message_cn.yml" 文件 (不存在则默认中文)]
+  # Plugin language [Matched configuration file is contained in directory "messages". For an instance, "message_cn.yml". (Fall back to Simplified Chinese once not exists)]
+  lang: cn
+# 游戏战场配置
+# In-game battlefield config
+game-config:
+  # 游戏世界
+  # In-game world
+  # - world => 主世界
+  # - nether => 地狱
+  # - end => 末地
+  world: world
+  # 游戏总时间 (单位：tick，1秒 = 20 ticks) [开始游戏后超过此时间立即结束游戏 服务器判定没有胜者] (例如 18000 ticks = 1200秒 = 15分钟)
+  # Total gaming time (unit: tick, 1s = 20 ticks) [Draw once time's up] (For an instance, 18000 ticks = 1200 seconds = 15 minutes)
+  total_time: 18000
