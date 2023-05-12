@@ -24,13 +24,13 @@ It's a long story, I hope this project will inspire everyone to love life, finge
 When you arrive at a total strange place, you found yourself alone.  
 You've been told a monster is just a few kilometers away.  
 Can you make yourself escape alive?  
-Or perhaps, someone else found you eaten.  
+Or perhaps, someone else could found you eaten.  
 Yes, you can save your teammates.  
 But that means giving up your own chance to make out alive quicker.  
 Will you join this adventure?  
 
 ## Play Method
-In the map, each team is randomly born in a strange place, fights against other players in a limited map, and survives to the end to be the final winner.
+In the map, each team is randomly spawned in separate places, fight against other players in a limited map, and survives to the end to be the final winner.
 
 ## Maintainers
 [Jack](https://github.com/imJack6)
