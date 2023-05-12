@@ -45,4 +45,4 @@ Jack: [`lyz747jack@outlook.com`](mailto:lyz747jack@outlook.com)
 William: [`williampascal_official@outlook.com`](mailto:williampascal_official@outlook.com)
 
 --------------------------
-![IDEA](https://img.shields.io/badge/Using_IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+![Using IDEA](https://img.shields.io/badge/Using_IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
