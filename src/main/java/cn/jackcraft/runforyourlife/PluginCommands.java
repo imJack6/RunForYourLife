@@ -45,8 +45,8 @@ public class PluginCommands implements CommandExecutor {
         return true;
     }
 
-/*
-    public static class AbstractCommand {
+
+/*    public static class AbstractCommand {
         // 纯属名称
         private final String commandName;
         // 用于String鉴别
@@ -93,5 +93,5 @@ public class PluginCommands implements CommandExecutor {
         
     }
 
- */
+
 }
