@@ -35,10 +35,10 @@ public class ConfigHandler {
         gameInit = config.getBoolean("game-config.init");
     }
     public String getPluginPrefix() {
-        return pluginPrefix;
+        return this.pluginPrefix;
     }
     public String getPluginLang() {
-        return pluginLang;
+        return this.pluginLang;
     }
     public boolean getGameInit() {
         return this.gameInit;
