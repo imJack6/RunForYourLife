@@ -90,8 +90,32 @@ public class PluginCommands implements CommandExecutor {
         private final AbstractCommand[] commands;
         private final boolean isComment;
 
-        
-    }
+        public CommandLine(AbstractCommand[] commands) {
+            this.commands = commands;
+            this.isComment = false;
+        }
+
+        public CommandLine(AbstractCommand[] commands, boolean isComment) {
+            this.commands = commands;
+            this.isComment = isComment;
+        }
+
+        // Returns return code
+        protected int execute() {
+
+        }
+
+        // Fails once indexToStartFrom is out of range
+        // Returns -1 once failed
+        protected int execute(int indexToStartFrom) {
+            if (indexToStartFrom < 0
+                || indexToStartFrom >= this.commands.length) {
+                return -1;
+            }
+
+
+        }
+    }*/
 
 
 }
