@@ -2,3 +2,29 @@ name: RunForYourLife
 version: '${project.version}'
 main: cn.jackcraft.runforyourlife.RunForYourLife
 api-version: 1.19
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  RunForYourLife:
+    #描述这个命令
+    description: RunForYourLife Main Command
+    #别名
+    aliases:
+      - runforyourlife
+      - RFYL
+      - rfyl
+
+permissions:
+  runforyourlife.*:
+    children:
+      runforyourlife.admin: true
+  runforyourlife.admin:
+    children:
+      runforyourlife.admin.help: true
+      runforyourlife.help: true
+  runforyourlife.admin.help:
+    default: "op"
+  runforyourlife.help:
+    default: "not op"
+
