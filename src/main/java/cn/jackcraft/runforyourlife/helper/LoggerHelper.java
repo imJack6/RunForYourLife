@@ -19,10 +19,10 @@ public class LoggerHelper {
         this.GLOBAL_COMMAND_SENDER = Bukkit.getConsoleSender();
         this.GLOBAL_BUKKIT_LOGGER = Bukkit.getLogger();
     }
-    public void Info(String Msg) {
-        Info(true, Msg);
+    public void info(String msg) {
+        info(true, msg);
     }
-    public void Info(boolean hasPrefix, String msg) {
+    public void info(boolean hasPrefix, String msg) {
         GLOBAL_COMMAND_SENDER.sendMessage((hasPrefix)
                 ? getConsoleMessageHandling(globalConfig.getPluginPrefix() + " " + msg)
                 : getConsoleMessageHandling(msg));
@@ -42,7 +42,7 @@ public class LoggerHelper {
     public void playerMsg(Player player, String msg) {
         playerMsg(true, player, msg);
     }
-    public void PlayerMsg(boolean hasPrefix, Player player, String msg) {
+    public void playerMsg(boolean hasPrefix, Player player, String msg) {
         player.sendMessage((hasPrefix)
                 ? getPlayerMessageHandling(player, globalConfig.getPluginPrefix() + " " + msg)
                 : getPlayerMessageHandling(player, msg));
