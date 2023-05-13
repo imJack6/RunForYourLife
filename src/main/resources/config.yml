@@ -1,5 +1,5 @@
-# ╔═══╗─────────╔═══╗────────╔╗──╔╗────────────╔╗──────╔═╗
-# ║╔═╗║─────────║╔══╝────────║╚╗╔╝║────────────║║──────║╔╝
+# ╔═══╗─────────╔═══╗────────╔╗──╔╗────────────╔╗──────╔═╗────
+# ║╔═╗║─────────║╔══╝────────║╚╗╔╝║────────────║║──────║╔╝────
 # ║╚═╝║╔╗╔╗╔══╗─║╚══╗╔══╗╔═╗─╚╗╚╝╔╝╔══╗╔╗╔╗╔═╗─║║───╔╗╔╝╚╗╔══╗
 # ║╔╗╔╝║║║║║╔╗╗─║╔══╝║╔╗║║╔╝──╚╗╔╝─║╔╗║║║║║║╔╝─║║─╔╗╠╣╚╗╔╝║║═╣
 # ║║║╚╗║╚╝║║║║║─║║───║╚╝║║║────║║──║╚╝║║╚╝║║║──║╚═╝║║║─║║─║║═╣
@@ -20,7 +20,7 @@ plugin-config:
   # Plugin logging message prefix
   prefix: "&7[&6RunForYourLife&7]"
   # 插件语言 [对应配置文件目录中的 "messages" 文件夹内的文件，例如 "message_cn.yml" 文件 (不存在则默认中文)]
-  # Plugin language [Matched configuration file is contained in directory "messages". For an instance, "message_cn.yml". (Fall back to Simplified Chinese once not exists)]
+  # Plugin language [Paired configuration file is contained in the directory "messages". For an instance, "message_cn.yml". (Fall back to Simplified Chinese once not exist)]
   lang: cn
   # 调试模式 (将会在控制台显示更多信息)
   # Debug mode (output more detailed information in console)
