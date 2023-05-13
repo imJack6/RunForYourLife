@@ -4,9 +4,12 @@
 # ║╔╗╔╝║║║║║╔╗╗─║╔══╝║╔╗║║╔╝──╚╗╔╝─║╔╗║║║║║║╔╝─║║─╔╗╠╣╚╗╔╝║║═╣
 # ║║║╚╗║╚╝║║║║║─║║───║╚╝║║║────║║──║╚╝║║╚╝║║║──║╚═╝║║║─║║─║║═╣
 # ╚╝╚═╝╚══╝╚╝╚╝─╚╝───╚══╝╚╝────╚╝──╚══╝╚══╝╚╝──╚═══╝╚╝─╚╝─╚══╝
+# 前排提示：本插件全局支持 PlaceholderAPI 变量，所有可填写字符串的配置均可使用 & 颜色代码，玩得愉快。
+# Hint 4 U: This plugin support PlaceholderAPI as variables globally. You can use colouring code for string rendering. Have fun. :)
+# ————————————————————————————
 # 逃往生处 配置文件
 # RunForYourLife Configuration file
-#————————————————————————————
+# ————————————————————————————
 # 插件配置文件版本 [请勿修改此项]
 # Plugin configuration file version [Please DO NOT modify this value!]
 version: 1
@@ -19,15 +22,86 @@ plugin-config:
   # 插件语言 [对应配置文件目录中的 "messages" 文件夹内的文件，例如 "message_cn.yml" 文件 (不存在则默认中文)]
   # Plugin language [Matched configuration file is contained in directory "messages". For an instance, "message_cn.yml". (Fall back to Simplified Chinese once not exists)]
   lang: cn
+  # 调试模式 (将会在控制台显示更多信息)
+  # Debug mode (output more detailed information in console)
+  debug: false
 # 游戏战场配置
 # In-game battlefield config
 game-config:
-  # 游戏世界
-  # In-game world
-  # - world => 主世界
-  # - nether => 地狱
-  # - end => 末地
-  world: world
-  # 游戏总时间 (单位：tick，1秒 = 20 ticks) [开始游戏后超过此时间立即结束游戏 服务器判定没有胜者] (例如 18000 ticks = 1200秒 = 15分钟)
-  # Total gaming time (unit: tick, 1s = 20 ticks) [Draw once time's up] (For an instance, 18000 ticks = 1200 seconds = 15 minutes)
-  total_time: 18000
+  # 是否已初始化，若通过指令方式设置完毕，此项将会自动修改为 true，若通过修改配置文件方式初始化请将此项设置为 true。
+  # Whether game had been initialised. With using command lines, this field will automatically set to true.
+  # Please be aware, if you tried to modify this configuration file to initialise manually, do please set this field to true.
+  init: false
+  # 世界地图设置
+  # In-game world bird-view config
+  world-settings:
+    # 大厅地图设置
+    # Lobby map bird-view config
+    lobby:
+      # 大厅地图名字 (必须存在此地图) [例如: world world_nether world_end 等]
+      # Lobby map bird-view title (existence required) [e.g. world world_nether world_end etc.]
+      name: world
+      # 玩家进入大厅的 XYZ 出生坐标
+      # Lobby players' spawning coordination
+      X: 0.00
+      Y: 0.00
+      Z: 0.00
+      # 玩家进入大厅的Yaw值 (取值范围: 正负无限) [头部左右朝向]
+      # Yaw value for lobby players(range: -inf to +inf) (horizontally aligned)
+      yaw: 0.00
+      # 玩家进入大厅的Pitch值 (取值范围: -90.00 ~ 90.00) [头部上下朝向]
+      # Pitch value for lobby players(range: -90.00 to 90.00) (vertically aligned)
+      pitch: 0.00
+    # 战场地图设置
+    # Battle field map config
+    battlefield:
+      # 战场地图名字 (随意填写) [例如: world world_nether world_end 等]
+      # Battle field map title (unrestricted) [e.g. world world_nether world_end etc.]
+      name: RunForYourLife_world
+      # 是否在每局游戏开始时初始化目标地图 (若启用，请勿填写大厅地图名字) [用途: 在游戏开始后删除原地图并重新创建新地图以初始化]
+      # Whether initialise targeting map once loaded the game. (once ON, please DO NOT fill up "Lobby map title", leave it empty)
+      # [Effect: Delete previous map to create a new one once the game started for initialisation]
+      starting-initialize: true
+      # 世界类型 (仅在 starting_initialize 为 true 时生效)
+      # In-game world type (Only effect once starting_initialize had been set to true)
+      # - world => 主世界 (Over World)
+      # - nether => 地狱 (The Nether)
+      # - end => 末地 (The End)
+      world-type: world
+  # 玩家设置
+  # Player settings
+  player-settings:
+    # 玩家出生设置
+    # Spawning settings
+    spawn-settings:
+      # 玩家出生间距设置
+      # Coordination interval settings
+      spawn-interval:
+        # 出生时玩家与玩家的间距
+        # Distance between players for spawning
+        interval: 50
+        # 是否使用在 interval 设置的值的基础上进行随机
+        # Use random value for interval on spawning
+        random-value: true
+        # interval 值随机的正负范围 (只有在启用了 random-value 此项才生效)
+        # Range for random interval (Effects only random-value had been set to true)
+        random-range: 20
+  # 全局设置
+  # Global settings
+  global-settings:
+    # 每局最多玩家
+    # Maximum players for each round.
+    max-player: 20
+    # 每局最少玩家 (高于或等于此值才开始游戏)
+    # Minimum players for each round. (The game will start if only greater than or equals as this value)
+    min-player: 2
+    # 游戏总时间 (单位：tick，1秒 = 20 ticks) [开始游戏后超过此时间立即结束游戏 服务器判定没有胜者] (例如 18000 ticks = 1200秒 = 15分钟)
+    # Total gaming time (unit: tick, 1s = 20 ticks) [Draw once time's up] (e.g. 18000 ticks = 1200 seconds = 15 minutes)
+    total-time: 18000
+    # 满足 max-player 值的倒计时时间 (单位：秒)
+    # Countdown for game to start once satisfied max-player (unit: seconds)
+    player-max-countdown: 15
+    # 至少满足 min-player 值的倒计时时间 (单位：秒)
+    # Countdown for game to start once at least satisfied min-player (unit: seconds)
+    player-min-countdown: 60
+
