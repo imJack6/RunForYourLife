@@ -5,6 +5,9 @@ README 语言: 简体中文 | [English](README.md)
 
 ![Codefactor Grade](https://img.shields.io/codefactor/grade/github/imjack6/runforyourlife?logo=codefactor&style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Last Commit](https://img.shields.io/github/last-commit/imJack6/RunForYourLife.svg)
+![Release](https://img.shields.io/github/downloads/imJack6/RunForYourLife/total.svg)
+![Download](https://img.shields.io/github/downloads/imJack6/RunForYourLife/total.svg)
 
 ![Alt](https://repobeats.axiom.co/api/embed/af6bc5ba5f4964d8aa38e7aa07994c8c0c25c8b7.svg)
 
