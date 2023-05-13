@@ -6,6 +6,8 @@
 # ╚╝╚═╝╚══╝╚╝╚╝─╚╝───╚══╝╚╝────╚╝──╚══╝╚══╝╚╝──╚═══╝╚╝─╚╝─╚══╝
 # RunForYourLife Official English Configuration File
 #————————————————————————————
+SYSTEM:
+  NOT_INIT: "Warning, the plugin is not initialised! Disabling."
 COMMAND:
   HELP_PAGE_1: "&7Manual &8- &7{CurrentHelpPage} &8/ &7{TotalHelpPage}\n
                 &8 - &r/{RootCommand} help &8- &7 see this help"
