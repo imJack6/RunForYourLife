@@ -21,7 +21,7 @@ public final class RunForYourLife extends JavaPlugin implements Listener {
     public static final Locale DEFAULT_SYSTEM_LOCALE = Locale.getDefault();
     public static StringPool globalStringPool = new StringPool();
     @Override
-    public void onLoad(){
+    public void onLoad() {
         // 插件加载逻辑 - 1
         saveDefaultConfig();
         plugin = this;
