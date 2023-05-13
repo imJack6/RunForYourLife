@@ -48,6 +48,12 @@ public class LangHandler {
         }
     }
     public String getLang(String langNode) {
-        return lang.getString(langNode);
+        if (lang.contains(langNode))
+            return lang.getString(langNode);
+        else
+            return langNode;
+    }
+    public boolean hasLangNode(String langNode){
+        return lang.contains(langNode);
     }
 }
