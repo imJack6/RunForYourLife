@@ -6,5 +6,9 @@
 # ╚╝╚═╝╚══╝╚╝╚╝─╚╝───╚══╝╚╝────╚╝──╚══╝╚══╝╚╝──╚═══╝╚╝─╚╝─╚══╝
 # 逃往生处 官方中文语言文件
 #————————————————————————————
+SYSTEM:
+  NOT_INIT: "警告，插件没有初始化，相关功能将不会启用！"
 COMMAND:
-  HELP_INDEX: "帮助 - {CurrentHelpPage} / {TotalHelpPage}"
+  UNKNOWN_COMMAND: "&c未知指令，使用 {RootCommand} help 获取帮助"
+  HELP_PAGE_1: "&8[&6RunForYourLife &7帮助 &8- &71&8/&7{TotalHelpPage}&8]\n
+                &8 - &r/{RootCommand} help &8<-> &7查看此帮助"
