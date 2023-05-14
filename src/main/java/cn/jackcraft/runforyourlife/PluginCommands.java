@@ -1,15 +1,90 @@
 package cn.jackcraft.runforyourlife;
 
+import cn.jackcraft.runforyourlife.executions.theory.AbstractCommand;
+import cn.jackcraft.runforyourlife.executions.theory.CommandSet;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
-import static cn.jackcraft.runforyourlife.RunForYourLife.globalLogger;
-import static cn.jackcraft.runforyourlife.RunForYourLife.globalLang;
 
 public class PluginCommands implements CommandExecutor {
-    @Override
+
+    // 这是一个定义实例
+    private final CommandSet globalCommandSet = new CommandSet(
+            new AbstractCommand[] {
+                    new AbstractCommand("List all commands for me!", "listall") {
+                        @Override
+                        public int work() {
+                            /* Da da da
+                             * 在这里实现 "listall" 功能
+                             * :) */
+                            return 0; // 返回值由实际功能决定
+                                      // 返回 0 为正常，其余均为异常
+                                      // 如果没有需要实现，留下 return 0; 即可
+                                      // *WINK* ;)
+                        }
+                        @Override
+                        public int work(CommandSender sender, Command cmd, String label) {
+                            return 0;
+                        }
+                    },
+                    new AbstractCommand("Help me~ QwQ", "help",
+                            // 若是存在子命令，请如此定义:
+                            new CommandSet(
+                                    new AbstractCommand[] {
+                                            new AbstractCommand("Help's help", "help") {
+                                                @Override
+                                                public int work() {
+                                                    /* 输出关于 help 的 help 文档
+                                                       Bala bala */
+                                                    return 0;
+                                                }
+
+                                                @Override
+                                                public int work(CommandSender sender, Command cmd, String label) {
+                                                    /* Bala bala */
+                                                    sender.sendMessage("test");
+                                                    return 0;
+                                                }
+                                            },
+                                            new AbstractCommand("Help -> listall", "listall") {
+                                                @Override
+                                                public int work() {
+                                                    /* 输出关于 listall 的 help 文档
+                                                       :D */
+                                                    return 0;
+                                                }
+
+                                                @Override
+                                                public int work(CommandSender sender, Command cmd, String label) {
+                                                    /* :P
+                                                     * 依次类推哦~
+                                                     * \(=^v^=)/
+                                                     */
+                                                    return 0;
+                                                }
+                                            }
+                                    }
+                            )) {
+                        @Override
+                        public int work() {
+                            /* Da da da
+                             * 在这里实现 "help" 功能
+                             * :) */
+                            return 0; // 返回值由实际功能决定
+                                      // 返回 0 为正常，其余均为异常
+                        }
+                        // 如果没有需要实现，留下 return 0; 即可
+                        @Override
+                        public int work(CommandSender sender, Command cmd, String label) {
+                            sender.sendMessage("test");
+                            return 0;
+                        }
+                    },
+                    // new AbstractCommand("...", "...") {...
+            }
+    );
+
+/*    @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String args[]) {
         Player p = null;
         if (sender instanceof Player)
@@ -42,80 +117,32 @@ public class PluginCommands implements CommandExecutor {
                 }
             }
         }
+
         return true;
-    }
-
-
-/*    public static class AbstractCommand {
-        // 纯属名称
-        private final String commandName;
-        // 用于String鉴别
-        private final String displayName;
-        // 子命令
-        private final AbstractCommand subcommand;
-        private final boolean hasSubcommand;
-
-        public AbstractCommand(String commandName, String displayName) {
-            this.commandName = commandName;
-            this.displayName = displayName;
-            this.subcommand = null;
-            this.hasSubcommand = false;
-        }
-
-        public AbstractCommand(String commandName, String displayName, AbstractCommand subcommand) {
-            this.commandName = commandName;
-            this.displayName = displayName;
-            this.subcommand = subcommand;
-            this.hasSubcommand = true;
-        }
-
-        public String getCommandName() {
-            return this.commandName;
-        }
-
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public AbstractCommand getSubCommand() {
-            return this.subcommand;
-        }
-
-        public boolean getHasSubcommand() {
-            return this.hasSubcommand;
-        }
-    }
-
-    public static class CommandLine {
-        private final AbstractCommand[] commands;
-        private final boolean isComment;
-
-        public CommandLine(AbstractCommand[] commands) {
-            this.commands = commands;
-            this.isComment = false;
-        }
-
-        public CommandLine(AbstractCommand[] commands, boolean isComment) {
-            this.commands = commands;
-            this.isComment = isComment;
-        }
-
-        // Returns return code
-        protected int execute() {
-
-        }
-
-        // Fails once indexToStartFrom is out of range
-        // Returns -1 once failed
-        protected int execute(int indexToStartFrom) {
-            if (indexToStartFrom < 0
-                || indexToStartFrom >= this.commands.length) {
-                return -1;
-            }
-
-
-        }
     }*/
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        for (String curr : args) {
+            final int commandIndex = globalCommandSet.validation(curr);
+
+            /* Have matches: call work() */
+            if (commandIndex != -1) {
+                // 这是一个调用实例
+                // 使用 CommandSet 中的 validation 以判定对象命令为合法命令，
+                // 随后即可调用已定义的抽象方法 work()
+                //                      或是 work(CommandSender, org.bukkit.command.Command, String) 以运行既定功能
+                // 命令功能明细请在 globalCommandSet 中实现
+
+                // 有问题 Q 我就行~ :)
+                return (globalCommandSet.getCommand(commandIndex).work(sender, cmd, label) == 0);
+            } else {
+                sender.sendMessage("Illegal command!");
+            }
+
+        }
+        /* Command not found, ignored. */
+        return true;
+    }
 
 }
