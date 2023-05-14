@@ -5,10 +5,16 @@ import cn.jackcraft.runforyourlife.handle.LangHandler;
 import cn.jackcraft.runforyourlife.helper.LoggerHelper;
 import cn.jackcraft.runforyourlife.literature.StringPool;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Locale;
@@ -76,5 +82,51 @@ public final class RunForYourLife extends JavaPlugin implements Listener {
                 globalLogger.playerMsg(p, globalLang.getLang("SYSTEM.NOT_INIT"));
             }
         }
+        //openInventory(p);
     }
+
+/*    public void openInventory(HumanEntity player) {
+        // 创建一个包含9个物品槽的背包
+        Inventory inventory = Bukkit.createInventory(null, 9, "My Inventory");
+
+        // 在背包中添加物品
+        ItemStack item = new ItemStack(Material.DIAMOND, 1);
+        inventory.setItem(0, item);
+
+        // 打开GUI菜单
+        player.openInventory(inventory);
+    }
+
+    @EventHandler
+    public void onInventoryClick(InventoryClickEvent event) {
+        if (!event.getView().getTitle().equals("My Inventory")) {
+            return;
+        }
+
+        // 防止玩家拖动物品到其他位置
+        event.setCancelled(true);
+
+        // 处理物品点击事件
+        if (event.getRawSlot() == 0) {
+            event.getWhoClicked().sendMessage("You clicked on a diamond");
+        }
+    }
+
+    @EventHandler
+    public void onInventoryClose(InventoryCloseEvent event) {
+        if (event.getView().getTitle().equals("My Inventory")) {
+            // 处理玩家关闭GUI菜单事件
+        }
+    }
+    public void ChestTest(){
+        // 创建一个包含9个物品槽的背包
+        Inventory inventory = Bukkit.createInventory(null, 9, "My Inventory");
+
+        // 在背包中添加物品
+        ItemStack item = new ItemStack(Material.DIAMOND, 1);
+        inventory.setItem(0, item);
+
+        // 打开GUI菜单
+        //player.openInventory(inventory);
+    }*/
 }
