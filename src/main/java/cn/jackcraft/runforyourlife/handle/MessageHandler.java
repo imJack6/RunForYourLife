@@ -13,7 +13,6 @@ public class MessageHandler {
     public static String getConsoleMessageHandling(String inputString) {
         String handle = inputString;
         handle = ChatColor.translateAlternateColorCodes('&', handle);
-        // ...
         return handle;
     }
 
@@ -21,7 +20,6 @@ public class MessageHandler {
         String handle = inputString;
         handle = ChatColor.translateAlternateColorCodes('&', handle);
         handle = getPAPIHandling(player, handle);
-        // ...
         return handle;
     }
 
