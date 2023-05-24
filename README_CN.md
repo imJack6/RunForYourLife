@@ -1,4 +1,5 @@
 # `逃往生处` [![CodeQL](https://github.com/imJack6/RunForYourLife/actions/workflows/codeql.yml/badge.svg)](https://github.com/imJack6/RunForYourLife/actions/workflows/codeql.yml)
+
 一个我的世界小游戏大逃杀插件，逃往生处！
 
 README 语言: 简体中文 | [English](README.md)
@@ -12,18 +13,24 @@ README 语言: 简体中文 | [English](README.md)
 ![Alt](https://repobeats.axiom.co/api/embed/af6bc5ba5f4964d8aa38e7aa07994c8c0c25c8b7.svg)
 
 --------------------------
+
 ## 前言
-长话短说，谨以此项目祝愿所有人热爱生活。祝好运。  
+
+长话短说，谨以此项目祝愿所有人热爱生活。祝好运。
 
 --------------------------
+
 ## 菜单
+
 - [简介](#简介)
 - [玩法](#玩法)
 - [项目维护者](#项目维护者)
 - [问题报告](#问题报告)
 
 --------------------------
+
 ## 简介
+
 你独自一人来到一处陌生领地，四周寂静无人。  
 据传言，该地居住着怪异之物，随时准备袭击冒然来访者。  
 你能够顺利逃出这是非之地吗？  
@@ -34,16 +41,19 @@ README 语言: 简体中文 | [English](README.md)
 // 1vN
 
 ## 玩法
+
 在地图中每个队伍随机出生到一个陌生的地方，在有限的地图内与其他玩家对战，活到最后为赢家。  
 // NvN
 
 ## 项目维护者
+
 <img src="https://avatars.githubusercontent.com/u/58357771?v=4" alt="Jack's Avatar" width="32" height="32" />[Jack](https://github.com/imJack6)
 
 <img src="https://avatars.githubusercontent.com/u/100808920?v=4" alt="Jack's Avatar" width="32" height="32" />[William](https://github.com/WilliamPascal)
 
 ## 问题报告
-你可以用电子邮件联系我们:  
+
+你可以用电子邮件联系我们:
 
 Jack: [`lyz747jack@outlook.com`](mailto:lyz747jack@outlook.com)
 
